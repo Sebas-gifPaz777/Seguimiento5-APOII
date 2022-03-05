@@ -12,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 	private Stage currentStage;
+	private AddValueController ad;
+	private 
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -74,7 +76,11 @@ public class Main extends Application {
 			stage.show();
 			
 		}catch(IOException e){
-			
+			e.printStackTrace();
 		}
+	}
+	
+	public void getOperation() {
+		return 
 	}
 }

@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -21,13 +22,16 @@
                <font>
                   <Font size="14.0" />
                </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="G1" />
+               </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbExpenses" layoutX="170.0" layoutY="124.0" mnemonicParsing="false" text="Gastos">
+            <RadioButton fx:id="rbExpenses" layoutX="170.0" layoutY="124.0" mnemonicParsing="false" text="Gastos" toggleGroup="$G1">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
-            <Button layoutX="117.0" layoutY="252.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="Añadir" />
+            <Button layoutX="117.0" layoutY="252.0" mnemonicParsing="false" onAction="#addMovement" prefHeight="34.0" prefWidth="67.0" text="Añadir" />
             <DatePicker fx:id="date" layoutX="155.0" layoutY="174.0" prefHeight="25.0" prefWidth="125.0" />
             <Label layoutX="72.0" layoutY="22.0" text="Seccion para añadir">
                <font>
@@ -51,9 +55,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="Funciones">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#FilterRegist" text="Filtrar movimiento" />
-                  <MenuItem mnemonicParsing="false" onAction="#AddRegist" text="Añadir transaccion" />
-              <MenuItem mnemonicParsing="false" onAction="#MovementList" text="Lista de transacciones" />
+                  <MenuItem mnemonicParsing="false" onAction="#filterRegist" text="Filtrar movimiento" />
+                  <MenuItem mnemonicParsing="false" onAction="#addRegist" text="Añadir transaccion" />
+              <MenuItem mnemonicParsing="false" onAction="#movementList" text="Lista de transacciones" />
             </items>
           </Menu>
         </menus>
